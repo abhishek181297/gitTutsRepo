@@ -557,3 +557,206 @@ abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ echo "the checkout
 the checkout command is used to bring back a previous state of project from repository
 
 
+abhishek@abhishek-HP-Laptop-15-bs0xx:~$ cd Desktop/git/Dogs_Site/
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git log
+commit ba3a431ed88046cbfd6b8ec1efa9358e22034909
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 11:39:54 2018 +0530
+
+    removing the HTML comments
+
+commit 933e41e89c71e3888e32d0e95a78c32eda20fc2e
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 11:32:28 2018 +0530
+
+    this is the very first commit
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ echo "How to unstage a file"
+How to unstage a file
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git commit .
+Aborting commit due to empty commit message.
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git add .
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git git status
+git: 'git' is not a git command. See 'git --help'.
+
+Did you mean this?
+	init
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   contact.html
+
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git reset HEAD contact.html
+Unstaged changes after reset:
+M	contact.html
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git add contact.html 
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git commit 
+Aborting commit due to empty commit message.
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   contact.html
+
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git commit -m "how to bring back from staged to unstaged"
+[master 2fe956d] how to bring back from staged to unstaged
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git log
+commit 2fe956de5d44ee8d201597b904501328edb93640
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 12:01:44 2018 +0530
+
+    how to bring back from staged to unstaged
+
+commit ba3a431ed88046cbfd6b8ec1efa9358e22034909
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 11:39:54 2018 +0530
+
+    removing the HTML comments
+
+commit 933e41e89c71e3888e32d0e95a78c32eda20fc2e
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 11:32:28 2018 +0530
+
+    this is the very first commit
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ echo "bringing the project to stage where we have removed the HTML comments we shall use the commit no."
+bringing the project to stage where we have removed the HTML comments we shall use the commit no.
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git checkout ba3a431 -- index.html
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ echo "NOw we have brought index.html to state when we have just removed the html comments"
+NOw we have brought index.html to state when we have just removed the html comments
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git status
+On branch master
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ git remote add gitTutsRepo https://github.com/abhishek181297/gitTutsRepo.git
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Dogs_Site$ cd ..
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git$ ls
+Dogs_Site  notes  Tuna
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git$ cd Tuna/
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Third
+	first
+	second
+
+nothing added to commit but untracked files present (use "git add" to track)
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git add .
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ ls
+first  home  LoveNotes  second  Third
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git log
+commit 22d5aa4174b9577206d2691d2f3c4a079a7dcd8f
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 10:45:32 2018 +0530
+
+    renamed file and put in LoveNotes
+
+commit c2debf17f6edf5ac5e0c925042171c1787497b60
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 10:41:42 2018 +0530
+
+    Renamed our first to home
+
+commit 06da0e8c373c7a2c4f938215d4ee2e3c7883fa2f
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 09:53:27 2018 +0530
+
+    this is the point where we deleted the third file
+
+commit 72e1dfe715f81c640054c5334dbed54b3f4602bc
+Author: Abhishek Kumar Singh <abhishek181297@gmail.com>
+Date:   Thu Mar 29 09:49:15 2018 +0530
+
+    difference between >>git diff and >>git diff --staged
+
+[1]+  Stopped                 git log
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git commit -m "the last commit"
+[master 375040b] the last commit
+ 3 files changed, 9 insertions(+)
+ create mode 100644 Third
+ create mode 100644 first
+ create mode 100644 second
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git status
+On branch master
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git remote add gitTutsRepo https://github.com/abhishek181297/gitTutsRepo.git
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git push -u gitTutsRepo master
+Username for 'https://github.com': abhishek181297@gmail.com
+Password for 'https://abhishek181297@gmail.com@github.com': 
+Counting objects: 37, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (37/37), 3.82 KiB | 0 bytes/s, done.
+Total 37 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/abhishek181297/gitTutsRepo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from gitTutsRepo.
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ ls
+first  home  LoveNotes  second  Third
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ cd ..
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git$ ls
+Dogs_Site  notes  Tuna
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git$ cp notes Tuna/notes
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git$ cd Tuna/
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ ls
+first  home  LoveNotes  notes  second  Third
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git status
+On branch master
+Your branch is up-to-date with 'gitTutsRepo/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	notes
+
+nothing added to commit but untracked files present (use "git add" to track)
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git add .
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git commit -m "adding the notes"
+[master 751178f] adding the notes
+ 1 file changed, 559 insertions(+)
+ create mode 100644 notes
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ echo "in .gitignore we write those files or folders which we don't want to keep track of "
+in .gitignore we write those files or folders which we don't want to keep track of 
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git status
+On branch master
+Your branch is ahead of 'gitTutsRepo/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git push -u gitTutsRepo master
+Username for 'https://github.com': abhishek181297
+Password for 'https://abhishek181297@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.98 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/abhishek181297/gitTutsRepo.git
+   375040b..751178f  master -> master
+Branch master set up to track remote branch master from gitTutsRepo.
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ git status
+On branch master
+Your branch is up-to-date with 'gitTutsRepo/master'.
+nothing to commit, working directory clean
+abhishek@abhishek-HP-Laptop-15-bs0xx:~/Desktop/git/Tuna$ 
+
+
+
